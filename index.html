@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To My Golu ❤️</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- Canvas Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     /* Soft Romantic Twinkling Stars */
@@ -24,14 +22,12 @@
 </head>
 <body id="bodyBg" class="bg-gradient-to-tr from-rose-950 via-pink-900 to-rose-900 min-h-screen flex flex-col justify-between font-sans text-rose-50 transition-all duration-1000 overflow-x-hidden relative">
 
-  <!-- 🔒 BIRTHDAY TIME LOCK OVERLAY -->
   <div id="lockOverlay" class="fixed inset-0 bg-gradient-to-tr from-stone-950 via-rose-950 to-stone-950 z-[100] flex flex-col items-center justify-center p-6 text-center transition-opacity duration-1000">
     <div class="space-y-6 max-w-sm">
       <div class="text-6xl animate-pulse">🔒🌹</div>
-      <h1 class="text-2xl font-serif font-bold text-rose-100 tracking-wide">Patience, My Love...</h1>
+      <h1 class="text-2xl font-serif font-bold text-rose-100 tracking-wide">Patience, My Golu...</h1>
       <p class="text-rose-200/60 text-sm italic">"Good things take time, but the best things are worth waiting for."</p>
       
-      <!-- Countdown Box -->
       <div class="p-4 bg-white/5 border border-rose-500/20 rounded-2xl shadow-inner">
         <p class="text-[10px] uppercase tracking-widest text-pink-400 font-bold mb-1">Unlocking In</p>
         <div id="countdownText" class="text-2xl font-mono font-bold text-rose-100 tracking-wider">
@@ -43,7 +39,6 @@
     </div>
   </div>
 
-  <!-- BACKGROUND ROMANTIC TWINKLING LIGHTS -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
     <div class="star w-1 h-1 top-[12%] left-[15%]" style="--duration: 3s;"></div>
     <div class="star bg-pink-200 w-1.5 h-1.5 top-[28%] left-[80%]" style="--duration: 4s;"></div>
@@ -52,26 +47,21 @@
     <div class="star bg-rose-200 w-2 h-2 top-[85%] left-[25%]" style="--duration: 3.5s;"></div>
   </div>
 
-  <!-- Audio Element (Make sure song.mp3 is inside your GitHub root folder alongside index.html) -->
   <audio id="bgMusic" loop src="song.mp3"></audio>
 
-  <!-- 1. THE ROMANTIC ENVELOPE SPLASH SCREEN -->
   <div id="splashScreen" class="fixed inset-0 bg-gradient-to-tr from-rose-900 via-pink-800 to-rose-950 z-50 flex flex-col items-center justify-center p-6 text-center transition-all duration-1000 ease-in-out">
     <div class="space-y-6 max-w-sm">
       <div class="text-7xl animate-pulse filter drop-shadow-[0_0_15px_rgba(244,63,94,0.4)]">✨💌✨</div>
       <h1 class="text-3xl font-serif font-bold text-rose-100 tracking-wide leading-snug">A Digital Envelope Full of Love...</h1>
       <p class="text-rose-200/70 text-sm italic">"Distance means so little when someone means so much."</p>
-      <!-- Clicking this button allows the music to play without being blocked by the browser -->
       <button id="enterBtn" class="px-10 py-4 bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white font-serif font-bold rounded-full shadow-2xl shadow-rose-500/30 hover:scale-105 active:scale-95 transition-all text-lg cursor-pointer tracking-wider">
         Open My Heart ❤️
       </button>
     </div>
   </div>
 
-  <!-- 2. FULL-PAGE SCROLLABLE DASHBOARD -->
   <main id="mainContent" class="w-full max-w-2xl mx-auto min-h-screen bg-rose-950/20 backdrop-blur-md p-6 sm:p-10 flex flex-col justify-between space-y-8 opacity-0 scale-95 pointer-events-none transition-all duration-1000 ease-out z-10">
 
-    <!-- Header Section -->
     <header class="space-y-2 text-center pt-4">
       <h1 class="text-4xl sm:text-5xl font-serif font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-rose-100 via-pink-200 to-white">
         Happy Birthday, My Golu!
@@ -79,7 +69,6 @@
       <p id="subHeading" class="text-sm sm:text-base text-rose-300/80 italic">No matter where you are or how you feel, I am right here with you.</p>
     </header>
 
-    <!-- MOOD SELECTION GRID -->
     <section class="space-y-4">
       <h2 class="text-xs font-bold uppercase tracking-widest text-pink-300/60 text-center">How is my favorite person feeling right now?</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -96,7 +85,7 @@
 
         <button onclick="changeMood('angry')" class="flex flex-col items-center justify-center p-5 bg-white/5 hover:bg-white/10 border border-red-400/20 hover:border-red-400/50 rounded-2xl transition-all active:scale-95 cursor-pointer group">
           <span class="text-3xl mb-2 group-hover:rotate-12 transition-transform">🌋</span>
-          <span class="text-xs sm:text-sm font-serif font-medium text-red-200 tracking-wide text-center">Tired </span>
+          <span class="text-xs sm:text-sm font-serif font-medium text-red-200 tracking-wide text-center">Tired</span>
         </button>
 
         <button onclick="changeMood('family')" class="flex flex-col items-center justify-center p-5 bg-white/5 hover:bg-white/10 border border-fuchsia-400/20 hover:border-fuchsia-400/50 rounded-2xl transition-all active:scale-95 cursor-pointer group">
@@ -107,13 +96,11 @@
       </div>
     </section>
 
-    <!-- MEMORY COLLAGE AREA -->
     <section id="photoArea" class="hidden space-y-4 transition-all duration-700 opacity-0 transform translate-y-4">
       <h2 id="photoTitle" class="text-sm font-serif font-bold tracking-wide text-center"></h2>
       <div id="photoGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
     </section>
 
-    <!-- THE DYNAMIC INNER DIARY BOX -->
     <section class="flex-grow flex items-center justify-center max-w-xl mx-auto w-full">
       <div id="moodDisplay" class="w-full p-6 sm:p-8 bg-white/5 border border-white/10 rounded-2xl text-left space-y-3 transition-all duration-500">
         <p class="font-bold text-pink-300 text-center text-lg font-serif">🌹 Welcome to Our Safe Space</p>
@@ -121,33 +108,66 @@
       </div>
     </section>
 
-    <!-- DEEPLY ROMANTIC LETTER POPUP TRIGGER -->
     <section class="pb-6">
       <button id="letterBtn" class="w-full py-4 sm:py-5 bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl shadow-rose-500/20 hover:brightness-110 active:scale-95 transition-all text-base sm:text-lg font-serif tracking-widest uppercase animate-pulse cursor-pointer">
         ✨ Open Our Forever Letter ✨
       </button>
     </section>
 
-    <!-- FULL LETTER VIEW MODAL (OPENS AT THE VERY END) -->
+    <div id="passwordModal" class="fixed inset-0 bg-rose-950/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-500">
+      <div class="bg-gradient-to-b from-rose-900 to-pink-950 w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-rose-500/30 text-center space-y-4 relative">
+        <button id="closePasswordBtn" class="absolute top-4 right-4 text-rose-400 hover:text-rose-200 cursor-pointer">✕</button>
+        <span class="text-4xl animate-bounce inline-block">🔐</span>
+        <h3 class="text-xl font-serif font-bold text-rose-100">Unlock My Heart</h3>
+        
+        <p class="text-rose-200/70 text-xs italic px-2">
+          "Where did we go on our very first date? <br>(First where you fall in love with Me) ❤️"
+        </p>
+
+        <input type="text" id="passwordInput" placeholder="Type here..." class="w-full px-4 py-3 bg-white/5 border border-rose-500/30 rounded-xl focus:outline-none focus:border-pink-400 font-sans text-center text-rose-100 tracking-wide text-sm placeholder-rose-300/30">
+        
+        <p id="errorMsg" class="text-red-400 text-xs font-medium hidden px-2 transition-all duration-300"></p>
+
+        <button id="submitPasswordBtn" class="w-full py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-serif font-bold rounded-xl shadow-md hover:brightness-110 active:scale-95 transition-all cursor-pointer text-sm">
+          Verify Key 🗝️
+        </button>
+      </div>
+    </div>
+
     <div id="letterModal" class="fixed inset-0 bg-rose-950/90 backdrop-blur-2xl z-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-700">
       <div class="bg-gradient-to-b from-rose-950 via-pink-950 to-rose-950 w-full max-w-lg max-h-[85vh] rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto relative text-left border border-rose-500/20 space-y-4">
         <button id="closeLetterBtn" class="absolute top-4 right-4 text-xl font-bold text-rose-400 hover:text-rose-200 cursor-pointer">✕</button>
         
         <div class="text-center space-y-1">
           <span class="text-4xl">🌹</span>
-          <h2 class="text-3xl font-serif font-bold text-rose-100">To My Whole Universe,</h2>
+          <h2 class="text-3xl font-serif font-bold text-rose-100">To My Panditain,</h2>
           <p class="text-xs text-pink-400 font-bold uppercase tracking-widest">Happy Birthday</p>
         </div>
 
-        <!-- ✍️ TYPE YOUR PRIVATE LETTER INSIDE THIS BOX BELOW ✍️ -->
         <div class="font-serif text-rose-100 leading-relaxed space-y-4 text-base whitespace-pre-line border-t border-white/5 pt-4 italic">
           Dear Isha (My Panditain),
 
-          Write whatever you want here... 
-          You can use multiple paragraphs, write in English, Hindi, or Gujarati!
-          Because of the "whitespace-pre-line" utility class, your spaces and enters will stay perfect.
-
-          Hu tane bau j prem karu chu. Happy Birthday! ❤️
+          First of all Happy happy happy Birthday. Have a wonderful year ahead. May all your dreams become true.
+		  
+          Bhagvan ne prathna karis k tari health & wealth majboot rakhe. Sorry bav saru nai lakhi sakto. You are with me so i am very lucky.
+		  
+          When we met idk k aapde aatli lambi safar vichari hase k nai actually ma a time kai vicharyu natu bas ek bija ma khovai ne rehta.
+		  
+          Tara jode ladta jagta kem na 4 year thai gaya khabar j nai but wonderful year rahya ghanu sikhyo chhu tara pase so thank you for that.
+		  
+          I know k hamna ghana time thi aapda vache saru nai chaltu once again we start to stranger for each other but time aapde ne ghanu sikhve chhe.
+		  
+          Me tane nani bachu isha mathi moti the scholar isha shah pass from waterloo university joi so i proud of you. I am very happy mane tu mali.
+		  
+          Mari ek request chhe tu life ne ek chance aap for your bright future ik aa bav hurt karse but aa as friend tane kav chhu. Ane tu kai bhi decision lais i am with you.
+		  
+          You are best daughter, best sister, best friend, best girlfriend, you are bestest person.
+		  
+          Bas biju kai toh chhe nai mara pase aapva mate but promise aapi saku hamesh tara sathe ubho hais.
+		  
+          Sorry if me tane kyare bhi hurt karyu hoy believe me maro koi intension nai hoto. Try karis k aagad tane mara lidhe koi issue na thay.
+		  
+          Once again aa year taru aakha life nu best year hoy, stay healthy & wealthy and most important Happy. All the best for your brightest future.
 
           Always with you,
           Rushit (your Panditji)
@@ -159,36 +179,34 @@
 
   <script>
     // 📅 SET HER BIRTHDAY HERE (Year, Month - 1, Day, Hour, Minute)
-    // Remember: Months are 0-indexed (0 = Jan, 1 = Feb, 9 = Oct, etc.)
-    const birthdayDate = new Date(2026, 5, 28, 0, 0, 0); 
+    // Locked to June 28, 2026
+    const birthdayDate = new Date(2026, 5, 22, 0, 0, 0); 
 
     // --- TIME LOCK LOGIC ---
     function checkTimeLock() {
       const now = new Date();
       const difference = birthdayDate - now;
 
-      // If the birthday date has hit or passed, remove the overlay completely
       if (difference <= 0) {
         const overlay = document.getElementById('lockOverlay');
-        overlay.classList.add('opacity-0');
-        setTimeout(() => overlay.remove(), 1000);
+        if (overlay) {
+          overlay.classList.add('opacity-0');
+          setTimeout(() => overlay.remove(), 1000);
+        }
         return;
       }
 
-      // Calculate time components
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      // Render the updated count
       document.getElementById('countdownText').innerHTML = 
         `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
       
       setTimeout(checkTimeLock, 1000);
     }
 
-    // Initialize the lock check immediately on page render
     window.addEventListener('DOMContentLoaded', checkTimeLock);
 
     const moodData = {
@@ -250,6 +268,12 @@
     const letterBtn = document.getElementById('letterBtn');
     const letterModal = document.getElementById('letterModal');
     const closeLetterBtn = document.getElementById('closeLetterBtn');
+
+    const passwordModal = document.getElementById('passwordModal');
+    const closePasswordBtn = document.getElementById('closePasswordBtn');
+    const submitPasswordBtn = document.getElementById('submitPasswordBtn');
+    const passwordInput = document.getElementById('passwordInput');
+    const errorMsg = document.getElementById('errorMsg');
 
     // Shower of falling red rose petals 🌹
     function dropRoses() {
@@ -326,13 +350,48 @@
       }, 200);
     }
 
-    // --- Forever Letter Window ---
+    // --- Password Validation Engine ---
     letterBtn.addEventListener('click', () => {
-      dropRoses();
-      letterModal.classList.remove('hidden');
-      setTimeout(() => { letterModal.classList.remove('opacity-0'); }, 10);
+      passwordInput.value = "";
+      errorMsg.classList.add('hidden');
+      errorMsg.innerText = "";
+      
+      passwordModal.classList.remove('hidden');
+      setTimeout(() => { passwordModal.classList.remove('opacity-0'); }, 10);
     });
 
+    closePasswordBtn.addEventListener('click', () => {
+      passwordModal.classList.add('opacity-0');
+      setTimeout(() => { passwordModal.classList.add('hidden'); }, 500);
+    });
+
+    submitPasswordBtn.addEventListener('click', () => {
+      const userInput = passwordInput.value.trim().toLowerCase();
+      
+      if (userInput === "manek chowk") {
+        passwordModal.classList.add('opacity-0');
+        setTimeout(() => { passwordModal.classList.add('hidden'); }, 500);
+        
+        setTimeout(() => {
+          dropRoses();
+          letterModal.classList.remove('hidden');
+          setTimeout(() => { letterModal.classList.remove('opacity-0'); }, 10);
+        }, 400);
+        
+      } else {
+        errorMsg.innerText = "Nice try, Panditain! That's not the secret password to my heart. Try again! 😜❤️";
+        errorMsg.classList.remove('hidden');
+        
+        passwordInput.classList.add('border-red-500');
+        setTimeout(() => passwordInput.classList.remove('border-red-500'), 500);
+      }
+    });
+
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') submitPasswordBtn.click();
+    });
+
+    // --- Close Letter Window ---
     closeLetterBtn.addEventListener('click', () => {
       letterModal.classList.add('opacity-0');
       setTimeout(() => { letterModal.classList.add('hidden'); }, 700);
